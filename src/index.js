@@ -5,10 +5,11 @@ import ReactDOM from 'react-dom'
 
 const Hello = (props) => {
 
-  const bornYear = () => {
-    const yearNow = new  Date().getFullYear();
-    return yearNow - props.age;
-  }
+  const name = props.name
+  const age = props.age
+
+  const bornYear = () => new  Date().getFullYear() - age;
+  
 
   return(
     <div>
