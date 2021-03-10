@@ -21,12 +21,15 @@ const App = () =>{
  
   const [counter, setCounter] = useState(0)
 
+  const increase = () => setCounter(counter + 1)
+
+  const setZero = () => setCounter(0)
 
 return(
    <div>
      <div>{counter}</div>
-     <button onClick={() => setCounter(counter + 1)}>plus</button>
-     <button onClick={() => setCounter(0)}>zero</button>
+     <button onClick={increase}>plus</button>
+     <button onClick={setZero}>zero</button>
      
    </div>
   )
