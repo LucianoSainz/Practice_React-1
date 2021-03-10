@@ -2,18 +2,9 @@ import React, {useState} from 'react'
 import ReactDOM from 'react-dom'
 
 
-
-const Hello = ({name, age}) => { 
-const bornYear = () => new  Date().getFullYear() - age;
-  
-
+const Display = (props) => {
   return(
-    <div>
-      <p>
-        Hello {name}, you are {age} years old
-      </p>
-      <p>So you were probably born in {bornYear()}</p>
-    </div>
+    <div>{props.counter}</div>
   )
 }
 
@@ -27,7 +18,7 @@ const App = () =>{
 
 return(
    <div>
-     <div>{counter}</div>
+     <Display counter={counter} />
      <button onClick={increase}>plus</button>
      <button onClick={setZero}>zero</button>
      
