@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import ReactDOM from 'react-dom'
 
 
@@ -18,15 +18,19 @@ const bornYear = () => new  Date().getFullYear() - age;
 }
 
 const App = () =>{
-  const name = 'Peter';
-  const age = 10;
+ 
+  const [counter, setCounter] = useState(0)
+
+  const handleClick = () => {
+    console.log('clicked')
+  }
 
 
 return(
    <div>
-     <h2>Greetings</h2>
-     <Hello name="Maya" age={26 + 10} />
-     <Hello name={name} age={age} />
+     <div>{counter}</div>
+     <button onClick={handleClick}>plus</button>
+     
    </div>
   )
 }
