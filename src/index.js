@@ -2,11 +2,9 @@ import React, {useState} from 'react'
 import ReactDOM from 'react-dom'
 
 
-const Display = (props) => {
-  return(
-    <div>{props.counter}</div>
-  )
-}
+const Display = ({counter}) => <div>{counter}</div>
+  
+
 
 const Button = (props) => {
   return(
